@@ -69,4 +69,21 @@ class LevenshteinNormalizerTests {
         Assertions.assertEquals("BZL",
                 normalizer.normalize("BZL"));
     }
+
+    @Test
+    void testNullNormalize(){
+        Assertions.assertNull(normalizer.normalize(null));
+    }
+
+    @Test
+    void testSpecialCharactersNormalize() {
+        Assertions.assertEquals("@#$%&",
+                normalizer.normalize("@#$%&"));
+    }
+
+    @Test
+    void testNumberNormalize() {
+        Assertions.assertEquals("123456",
+                normalizer.normalize("123456"));
+    }
 }

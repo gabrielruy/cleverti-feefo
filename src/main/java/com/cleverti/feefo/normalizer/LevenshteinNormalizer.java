@@ -12,6 +12,13 @@ class LevenshteinNormalizer {
     private static final List<String> normalizedWords = List.of("Architect", "Software Engineer", "Quantity Surveyor", "Accountant");
 
     String normalize(String string) {
+
+        // If the received string is null, the application will return null
+        if (string == null) {
+            System.out.println("null");
+            return null;
+        }
+
         LevenshteinDistance distance = LevenshteinDistance.getDefaultInstance();
         Double lowerDistance = Double.MAX_VALUE;
         String normalizedTitle = "";
