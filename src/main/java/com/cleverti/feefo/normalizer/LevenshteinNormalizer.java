@@ -1,6 +1,6 @@
 package com.cleverti.feefo.normalizer;
 
-import org.apache.commons.text.similarity.LevenshteinDistance;
+import com.cleverti.feefo.calculator.LevenshteinDistance;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
@@ -19,7 +19,6 @@ class LevenshteinNormalizer {
             return null;
         }
 
-        LevenshteinDistance distance = LevenshteinDistance.getDefaultInstance();
         Double lowerDistance = Double.MAX_VALUE;
         String normalizedTitle = "";
 
@@ -27,7 +26,8 @@ class LevenshteinNormalizer {
         // If there is no correspondence, the levenshtein distance will be 1.0
         // In this situation, the input word will be kept
         for (String normalizedWord : normalizedWords) {
-            Double levenshteinDistance = distance.apply(normalizedWord, string).doubleValue() /
+            Integer distance = LevenshteinDistance.calculate(normalizedWord, string);
+            Double levenshteinDistance = distance.doubleValue() /
                     Math.max(normalizedWord.length(), string.length());
             if (!levenshteinDistance.equals(1.0) && levenshteinDistance < lowerDistance) {
                 lowerDistance = levenshteinDistance;
