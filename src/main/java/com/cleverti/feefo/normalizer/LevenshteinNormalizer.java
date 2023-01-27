@@ -22,8 +22,8 @@ class LevenshteinNormalizer {
         Double lowerDistance = Double.MAX_VALUE;
         String normalizedTitle = "";
 
-        // Calculating the levenshtein distance, smaller it is, closer to the normalized word
-        // If there is no correspondence, the levenshtein distance will be 1.0
+        // Calculating the Levenshtein distance, smaller it is, closer to the normalized word
+        // If there is no correspondence, the Levenshtein distance will be 1.0
         // In this situation, the input word will be kept
         for (String normalizedWord : normalizedWords) {
             Integer distance = LevenshteinDistance.calculate(normalizedWord, string);
