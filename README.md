@@ -11,7 +11,7 @@ Tipically, three types of operations are performed (one at a time);
 
 For example, the Levenshtein distance between "kitten" and "sitting" is 3 since, at a minimum, 3 edits are required to change one into the other.
 
-1- kitten -> sitten (substitution of "s" for "k")
+1- kitten -> sitten (substitution of "k" for "s")
 
 2- sitten -> sittin (substitution of "e" for "i")
 
