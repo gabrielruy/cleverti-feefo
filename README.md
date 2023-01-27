@@ -17,9 +17,6 @@ For example, the Levenshtein distance between "kitten" and "sitting" is 3 since,
 
 3- sittin -> sitting (insertion of "g" at the end)
 
-Luckily, we already have an implementation of Levenshtein rules ready to be used on Apache Commons Text library.
-https://commons.apache.org/proper/commons-text/apidocs/org/apache/commons/text/similarity/LevenshteinDistance.html
-
 The exercise proposed for this application was:
 Provided with a list of ideal (normalized) job titles, create a class that implements a process that returns the best match when provided with an
 input string.

@@ -84,7 +84,7 @@ public class LevenshteinDistance {
      *  |   " "   |    0    |    1   |    2   |
      *  |    P    |    1    |    1   |    1   |
      *  |    P    |    2    |    2   |    1   |
-     *  Here we have it! The Levenshtein distance between DP and PP is 1, the result is on dpTable[2][2].
+     *  Finally, the Levenshtein distance between DP and PP is 1, the result is on dpTable[2][2].
      *
      */
     public static int calculate(String x, String y) {
